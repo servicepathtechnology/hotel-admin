@@ -37,7 +37,7 @@ const DashboardOverview = () => {
   const [metrics, setMetrics] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/admin/metrics')
+    fetch('https://hotel-backend-coral.vercel.app/api/admin/metrics')
       .then(r => r.json())
       .then(setMetrics)
       .catch(console.error);
@@ -103,7 +103,7 @@ const BookingsList = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/bookings/')
+    fetch('https://hotel-backend-coral.vercel.app/api/bookings/')
       .then(r => r.json())
       .then(setBookings)
       .catch(console.error);
@@ -154,7 +154,7 @@ const RoomInventory = () => {
     const [rooms, setRooms] = useState([]);
   
     useEffect(() => {
-      fetch('http://localhost:8000/api/admin/rooms/status')
+      fetch('https://hotel-backend-coral.vercel.app/api/admin/rooms/status')
         .then(r => r.json())
         .then(setRooms)
         .catch(console.error);
@@ -200,7 +200,7 @@ const UserDirectory = () => {
     const [users, setUsers] = useState([]);
   
     useEffect(() => {
-      fetch('http://localhost:8000/api/admin/users')
+      fetch('https://hotel-backend-coral.vercel.app/api/admin/users')
         .then(r => r.json())
         .then(setUsers)
         .catch(console.error);
@@ -240,7 +240,7 @@ const AIOperations = () => {
     const [ops, setOps] = useState(null);
   
     useEffect(() => {
-      fetch('http://localhost:8000/api/admin/ai-operations')
+      fetch('https://hotel-backend-coral.vercel.app/api/admin/ai-operations')
         .then(r => r.json())
         .then(setOps)
         .catch(console.error);
